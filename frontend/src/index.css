@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%; /* fallback */
+    --foreground: 210 40% 98%;
+  }
+
+  body {
+    background-color: #070B12; /* Very dark black/blue as requested */
+    color: #FFFFFF;
+    @apply font-sans antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    background-color: rgba(17, 24, 39, 0.8); /* bg-card (#111827) with 80% opacity */
+    border-color: #1F2937;
+    @apply backdrop-blur-md border shadow-lg rounded-xl;
+  }
+  
+  .glass-card {
+    background-color: #111827;
+    border-color: #1F2937;
+    @apply border rounded-xl shadow-[0_4px_24px_-4px_rgba(0,0,0,0.5)];
+  }
+}
